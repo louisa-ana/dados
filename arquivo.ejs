@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: azure;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mg {
+        background-color: lightblue;
+        color: black;
+        padding: 20px;
+        border-radius: 5px;
+        width: calc(100% - 60px);
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      .form {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 20px;
+        background-color: aliceblue;
+        gap: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .button {
+        background-color: #4562a0;
+        color: white;
+        width: 300px;
+        height: 30px;
+        border: white;
+        border-radius: 20px;
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mg"><h1>SAEB</h1></div>
+
+    <h2>Aqui estão as informações referentes a escola selecionada:</h2>
+
+    <div class="form">
+      <% rows.forEach(function(row) { %>
+      <label for="taxaAprovacao">Taxa de Aprovação:</label>
+      <input
+        type="text"
+        id="taxaAprovacao"
+        name="taxaAprovacao"
+        value="<%= (row.taxa_aprovacao * 1) %>%"
+        readonly
+      />
+
+      <label for="indicadorRendimento">Indicador de Rendimento:</label>
+      <input
+        type="text"
+        id="indicadorRendimento"
+        name="indicadorRendimento"
+        value="<%= (row.indicador_rendimento * 1) %>%"
+        readonly
+      />
+
+      <label for="notaMatematica">Nota SAEB em Matemática:</label>
+      <input
+        type="text"
+        id="notaMatematica"
+        name="notaMatematica"
+        value="<%= row.nota_saeb_matematica %>"
+        readonly
+      />
+
+      <label for="notaPortugues">Nota SAEB em Língua Portuguesa:</label>
+      <input
+        type="text"
+        id="notaPortugues"
+        name="notaPortugues"
+        value="<%= row.nota_saeb_lingua_portuguesa %>"
+        readonly
+      />
+
+      <label for="notaPadronizada">Nota Média Padronizada:</label>
+      <input
+        type="text"
+        id="notaPadronizada"
+        name="notaPadronizada"
+        value="<%= row.nota_saeb_media_padronizada %>"
+        readonly
+      />
+
+      <label for="ideb">IDEB:</label>
+      <input
+        type="text"
+        id="ideb"
+        name="ideb"
+        value="<%= row.ideb %>"
+        readonly
+      />
+
+      <label for="projecao">Projeção:</label>
+      <input
+        type="text"
+        id="projecao"
+        name="projecao"
+        value="<%= row.projecao %>"
+        readonly
+      />
+      <% }); %>
+    </div>
+  </body>
+</html>

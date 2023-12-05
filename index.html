@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: azure;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mg {
+        background-color: lightblue;
+        color: black;
+        padding: 20px;
+        border-radius: 5px;
+        width: calc(100% - 60px);
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      h2,
+      h3 {
+        color: #333;
+        text-align: center;
+      }
+
+      .text {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      form {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 20px;
+        background-color: aliceblue;
+        gap: 20px;
+      }
+
+      .row {
+        position: absolute;
+        right: 60%;
+        top: 25%;
+      }
+
+      .pesquisa {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+      }
+
+      label {
+        margin-bottom: 8px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4c7aaf;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4562a0;
+      }
+
+      .link-message {
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mg"><h1>SAEB</h1></div>
+
+    <h2>
+      Aqui estão as informações referentes às escolas de Divinópolis - MG:
+    </h2>
+    <p class="text">
+      Preencha as informações abaixo para poder visualizar as informações
+      correspondentes.
+    </p>
+
+    <div class="row" id="1">
+      <form action="/pesquisar" method="post">
+        <label for="escola">Escolas</label>
+        <select name="escola" id="escola">
+          <option value="Selecione"></option>
+          <option value="31037249">ESCOLA MUNICIPAL SAO SEBASTIAO</option>
+          <option value="31348490">ESCOLA MUNICIPAL JOSE CARLOS PEREIRA</option>
+          <option value="31037397">ESCOLA MUNICIPAL DONA MARIA ROSA</option>
+          <option value="31223905">EM SIDNEY JOSE DE OLIVEIRA</option>
+          <option value="31037338">EM SAO JOSE</option>
+          <option value="31037290">EM SAO GERALDO</option>
+          <option value="31248665">EM RAIO DE SOL</option>
+          <option value="31037231">EM PROFESSORA HERMINIA CORGOZINHO</option>
+          <option value="31277649">EM PROFESSOR PAULO FREIRE</option>
+          <option value="31220051">EM PROFESSOR ODILON SANTIAGO</option>
+          <option value="31277631">EM PROFA VENEZA G OLIVEIRA</option>
+          <option value="31320374">EM PROFA MARIA LOURDES TEIXEIRA</option>
+          <option value="31320391">EM PROFA EVELINA GRECO SANTOS</option>
+          <option value="31033308">EM PROF DARCY RIBEIRO</option>
+          <option value="31223921">EM PROF BAHIA</option>
+          <option value="31212733">EM PE GUARITA</option>
+          <option value="31037541">EM OTAVIO OLIMPIO DE OLIVEIRA</option>
+          <option value="31037532">EM ORIBES BATISTA LEITE</option>
+          <option value="31223913">EM MARIA FONSECA PECANHA</option>
+          <option value="31322679">EM JOSE QUINTINO LOPES</option>
+          <option value="31223891">EM JOAO SEVERINO DE AZEVEDO</option>
+          <option value="31227102">EM JOAO GONTIJO DA FONSECA</option>
+          <option value="31037214">EM JOAO EPIPHANIO PEREIRA</option>
+          <option value="31037401">EM EMILIO RIBAS</option>
+          <option value="31220060">EM DR SEBASTIAO GOMES GUIMARAES</option>
+          <option value="31370347">EM DIONISIO JOAQUIM RODRIGUES</option>
+          <option value="31037346">EM BOM PASTOR</option>
+          <option value="31037320">EM BENJAMIN CONSTANT</option>
+          <option value="31037303">EM ANTONIO PIO DA SILVA</option>
+          <option value="31313653">EM ANTONIETA FONSECA</option>
+          <option value="31227099">EM ADOLFO MACHADO</option>
+          <option value="31033383">EE VICENTE MATEUS</option>
+          <option value="31033324">EE SAO VICENTE</option>
+          <option value="31033332">EE SAO FRANCISCO DE PAULA</option>
+          <option value="31033316">EE SAO FRANCISCO DE ASSIS</option>
+          <option value="31033031">EE SANTO TOMAZ DE AQUINO</option>
+          <option value="31033057">EE ROSA VAZ DE ARAUJO</option>
+          <option value="31033341">EE PROFESSOR CHICO DIAS</option>
+          <option value="31033294">EE PATRONATO BOM PASTOR</option>
+          <option value="31033286">EE PADRE MATIAS LOBATO</option>
+          <option value="31033278">EE NOSSA SENHORA DO SAGRADO CORACAO</option>
+          <option value="31033260">EE MONSENHOR DOMINGOS</option>
+          <option value="31033251">EE MIGUEL COUTO</option>
+          <option value="31032999">EE MARTIN CYPRIEN</option>
+          <option value="31033375">EE MANOEL CORREA FILHO</option>
+          <option value="31033235">EE LUIZ DE MELO VIANA SOBRINHO</option>
+          <option value="31033227">EE LAURO EPIFANIO</option>
+          <option value="31033219">EE JOVELINO RABELO</option>
+          <option value="31033201">EE JOAQUIM NABUCO</option>
+          <option value="31033405">EE ILIDIO DA COSTA PEREIRA</option>
+          <option value="31033197">EE HENRIQUE GALVAO</option>
+          <option value="31033189">EE HALIM SOUKI</option>
+          <option value="31033171">EE ENGENHEIRO PEDRO MAGALHAES</option>
+          <option value="31033154">EE DONA ANTONIA VALADARES</option>
+          <option value="31033391">EE DO BAIRRO BELO VALE</option>
+          <option value="31033138">
+            EE DE EDUCACAO ESPECIAL HELENA ANTIPOFF
+          </option>
+          <option value="31033014">EE ARMANDO NOGUEIRA SOARES</option>
+          <option value="31033022">EE ANTONIO OLIMPIO DE MORAIS</option>
+          <option value="31033006">EE ANTONIO GONCALVES DE MATOS</option>
+          <option value="31033359">EE ANTONIO DA COSTA PEREIRA</option>
+          <option value="31033421">EE ANTONIO BELARMINO GOMES</option>
+          <option value="31326992">EE ALBERTO SANTOS DUMONT</option>
+          <option value="31364592">
+            COLEGIO TIRADENTES PMMG - UNIDADE DIVINOPOLIS
+          </option>
+
+          <option value="31268631">CEFET-MG - UNED DIVINOPOLIS</option>
+
+          <option value="31223930">CAIC EM PE JOAO BRUNO</option>
+        </select>
+
+        <label for="ano">Ano:</label>
+        <select id="ano" name="ano">
+          <option value="Selecione"></option>
+          <option value="2007">2007</option>
+          <option value="2009">2009</option>
+          <option value="2011">2011</option>
+          <option value="2013">2013</option>
+          <option value="2015">2015</option>
+          <option value="2017">2017</option>
+          <option value="2019">2019</option>
+          <option value="2021">2021</option>
+        </select>
+
+        <label for="ensino">Tipo de Ensino:</label>
+        <select id="ensino" name="ensino">
+          <option value="Selecione"></option>
+          <option value="fundamental">Fundamental</option>
+          <option value="medio">Médio</option>
+        </select>
+
+        <label for="anosEscolares">Anos Escolares:</label>
+        <select id="anosEscolares" name="anosEscolares">
+          <option value="Selecione"></option>
+          <option value="iniciais (1-5)">Inicial (1-5)</option>
+          <option value="finais (6-9)">Final (6-9)</option>
+          <option value="todos (1-4)">Todos (1-4)</option>
+        </select>
+
+        <input type="submit" value="Buscar Informações" />
+      </form>
+    </div>
+
+    <div class="pesquisa">
+      <form action="/pesquisar2" method="post">
+        <label for="escola"
+          >Selecione a escola para visualizar o histórico de média:</label
+        >
+        <select name="escola" id="escola">
+          <option value="Selecione"></option>
+          <option value="31037249">ESCOLA MUNICIPAL SAO SEBASTIAO</option>
+          <option value="31348490">ESCOLA MUNICIPAL JOSE CARLOS PEREIRA</option>
+          <option value="31037397">ESCOLA MUNICIPAL DONA MARIA ROSA</option>
+          <option value="31223905">EM SIDNEY JOSE DE OLIVEIRA</option>
+          <option value="31037338">EM SAO JOSE</option>
+          <option value="31037290">EM SAO GERALDO</option>
+          <option value="31248665">EM RAIO DE SOL</option>
+          <option value="31037231">EM PROFESSORA HERMINIA CORGOZINHO</option>
+          <option value="31277649">EM PROFESSOR PAULO FREIRE</option>
+          <option value="31220051">EM PROFESSOR ODILON SANTIAGO</option>
+          <option value="31277631">EM PROFA VENEZA G OLIVEIRA</option>
+          <option value="31320374">EM PROFA MARIA LOURDES TEIXEIRA</option>
+          <option value="31320391">EM PROFA EVELINA GRECO SANTOS</option>
+          <option value="31033308">EM PROF DARCY RIBEIRO</option>
+          <option value="31223921">EM PROF BAHIA</option>
+          <option value="31212733">EM PE GUARITA</option>
+          <option value="31037541">EM OTAVIO OLIMPIO DE OLIVEIRA</option>
+          <option value="31037532">EM ORIBES BATISTA LEITE</option>
+          <option value="31223913">EM MARIA FONSECA PECANHA</option>
+          <option value="31322679">EM JOSE QUINTINO LOPES</option>
+          <option value="31223891">EM JOAO SEVERINO DE AZEVEDO</option>
+          <option value="31227102">EM JOAO GONTIJO DA FONSECA</option>
+          <option value="31037214">EM JOAO EPIPHANIO PEREIRA</option>
+          <option value="31037401">EM EMILIO RIBAS</option>
+          <option value="31220060">EM DR SEBASTIAO GOMES GUIMARAES</option>
+          <option value="31370347">EM DIONISIO JOAQUIM RODRIGUES</option>
+          <option value="31037346">EM BOM PASTOR</option>
+          <option value="31037320">EM BENJAMIN CONSTANT</option>
+          <option value="31037303">EM ANTONIO PIO DA SILVA</option>
+          <option value="31313653">EM ANTONIETA FONSECA</option>
+          <option value="31227099">EM ADOLFO MACHADO</option>
+          <option value="31033383">EE VICENTE MATEUS</option>
+          <option value="31033324">EE SAO VICENTE</option>
+          <option value="31033332">EE SAO FRANCISCO DE PAULA</option>
+          <option value="31033316">EE SAO FRANCISCO DE ASSIS</option>
+          <option value="31033031">EE SANTO TOMAZ DE AQUINO</option>
+          <option value="31033057">EE ROSA VAZ DE ARAUJO</option>
+          <option value="31033341">EE PROFESSOR CHICO DIAS</option>
+          <option value="31033294">EE PATRONATO BOM PASTOR</option>
+          <option value="31033286">EE PADRE MATIAS LOBATO</option>
+          <option value="31033278">EE NOSSA SENHORA DO SAGRADO CORACAO</option>
+          <option value="31033260">EE MONSENHOR DOMINGOS</option>
+          <option value="31033251">EE MIGUEL COUTO</option>
+          <option value="31032999">EE MARTIN CYPRIEN</option>
+          <option value="31033375">EE MANOEL CORREA FILHO</option>
+          <option value="31033235">EE LUIZ DE MELO VIANA SOBRINHO</option>
+          <option value="31033227">EE LAURO EPIFANIO</option>
+          <option value="31033219">EE JOVELINO RABELO</option>
+          <option value="31033201">EE JOAQUIM NABUCO</option>
+          <option value="31033405">EE ILIDIO DA COSTA PEREIRA</option>
+          <option value="31033197">EE HENRIQUE GALVAO</option>
+          <option value="31033189">EE HALIM SOUKI</option>
+          <option value="31033171">EE ENGENHEIRO PEDRO MAGALHAES</option>
+          <option value="31033154">EE DONA ANTONIA VALADARES</option>
+          <option value="31033391">EE DO BAIRRO BELO VALE</option>
+          <option value="31033138">
+            EE DE EDUCACAO ESPECIAL HELENA ANTIPOFF
+          </option>
+          <option value="31033014">EE ARMANDO NOGUEIRA SOARES</option>
+          <option value="31033022">EE ANTONIO OLIMPIO DE MORAIS</option>
+          <option value="31033006">EE ANTONIO GONCALVES DE MATOS</option>
+          <option value="31033359">EE ANTONIO DA COSTA PEREIRA</option>
+          <option value="31033421">EE ANTONIO BELARMINO GOMES</option>
+          <option value="31326992">EE ALBERTO SANTOS DUMONT</option>
+          <option value="31364592">
+            COLEGIO TIRADENTES PMMG - UNIDADE DIVINOPOLIS
+          </option>
+
+          <option value="31268631">CEFET-MG - UNED DIVINOPOLIS</option>
+
+          <option value="31223930">CAIC EM PE JOAO BRUNO</option>
+        </select>
+
+        <input type="submit" value="Buscar Informações" />
+      </form>
+    </div>
+  </body>
+</html>

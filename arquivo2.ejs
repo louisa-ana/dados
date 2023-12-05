@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: azure;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mg {
+      background-color: lightblue;
+      color: black;
+      padding: 20px;
+      border-radius: 5px;
+      width: calc(100% - 60px);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .form {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 30px;
+      padding: 20px;
+      background-color: aliceblue;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div class="mg"><h1>SAEB</h1></div>
+
+    <h2>Aqui está o histórico da escola selecionada:</h2>
+    <div class="form">
+      <% pesquisa.forEach(function(row) { %>
+      <label for="notaPadronizada">Ano: <%= row.ano %></label>
+      <input
+        type="text"
+        id="notaPadronizada"
+        name="notaPadronizada"
+        value="Nota Média Padronizada: <%= row.nota_saeb_media_padronizada %>"
+        readonly
+      />
+      <% }); %>
+    </div>
+  </body>
+</html>
